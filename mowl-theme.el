@@ -30,7 +30,7 @@
 
 (let ((cbg-0 "#172329")
       (cbg-1 "#2c434f")
-      (cfg-0 "#f4f6fa")
+      (cfg-0 "#f2f2f2")
       (cfg-orange "#fe9225")
       (c256bg-0 "#1a1a1a")
       (c256fg-0 "#eeeeee")
