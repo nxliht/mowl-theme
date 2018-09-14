@@ -30,7 +30,7 @@
 
 (let ((colbg-0 "#172329")
       (colbg-1 "#2c434f")
-      (colfg-0 "#f9fbff")
+      (colfg-0 "#f4f6fa")
       (colfg-orange "#fe9225")
       (col256bg-0 "#1a1a1a")
       (col256fg-0 "#eeeeee")
