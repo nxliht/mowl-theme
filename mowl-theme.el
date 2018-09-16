@@ -28,9 +28,9 @@
 (deftheme mowl
   "Nice dark theme for emacs.")
 
-(let ((cbg-0 "#172329")
+(let ((cbg-0 "#111b27")
       (cbg-1 "#2c434f")
-      (cfg-0 "#f2f2f2")
+      (cfg-0 "#e8f0ff")
       (cfg-orange "#fe9225")
       (c256bg-0 "#1a1a1a")
       (c256fg-0 "#eeeeee")
