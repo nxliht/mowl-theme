@@ -40,7 +40,6 @@
    'mowl
 
    ;; Default Face
-   '(default ((t (:family "Courier New" :width normal :height 130 :weight normal :slant normal))))
    `(default ((,default-class (:background ,cbg-0 :foreground ,cfg-0)) (t (:background ,c256bg-0 :foreground ,c256fg-0))))
 
    ;; Comments Face
