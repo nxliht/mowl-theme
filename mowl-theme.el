@@ -24,27 +24,29 @@
 ;; Custom theme for emacs
 
 ;;; Code:
-
 (deftheme mowl
   "Nice dark theme for emacs.")
 
 (let ((bg-0 "#111b27")
       (bg-1 "#2c434f")
-      (bg256-0 "#1a1a1a")
       (fg-0 "#e8f0ff")
       (fg-orange "#fe9225")
+      (bg256-0 "#080808")
       (fg256-0 "#eeeeee")
+      (fg256-orange "#ffaf00")
       (default-class '((class color) (min-colors 16777216))))
 
   (custom-theme-set-faces
    'mowl
 
    ;; Default Face
-   '(default ((t (:family "Courier New" :width normal :height 130 :weight normal :slant normal))))
-   `(default ((,default-class (:background ,bg-0 :foreground ,fg-0)) (t (:background ,bg256-0 :foreground ,fg256-0))))
+   `(default ((default (:family "Courier New" :width normal :height 130 :weight normal :slant normal ))
+              (,default-class (:background ,bg-0 :foreground ,fg-0))
+              (t (:background ,bg256-0 :foreground ,fg256-0))))
 
    ;; Comments Face
-   `(font-lock-comment-face ((,default-class (:foreground ,fg-orange))))
+   `(font-lock-comment-face ((,default-class (:foreground ,fg-orange))
+                             (t (:foreground ,fg256-orange))))
 
    ;; Ediff Fine Differences
    `(ediff-even-diff-A ((,default-class (:background ,bg-1))))
