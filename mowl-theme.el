@@ -28,29 +28,33 @@
 (deftheme mowl
   "Nice dark theme for emacs.")
 
-(let ((cbg-0 "#111b27")
-      (cbg-1 "#2c434f")
-      (cfg-0 "#e8f0ff")
-      (cfg-orange "#fe9225")
-      (c256bg-0 "#1a1a1a")
-      (c256fg-0 "#eeeeee")
+(let ((bg-0 "#111b27")
+      (bg-1 "#2c434f")
+      (bg256-0 "#1a1a1a")
+      (fg-0 "#e8f0ff")
+      (fg-orange "#fe9225")
+      (fg256-0 "#eeeeee")
       (default-class '((class color) (min-colors 16777216))))
-  
+
   (custom-theme-set-faces
    'mowl
 
    ;; Default Face
-   `(default ((,default-class (:background ,cbg-0 :foreground ,cfg-0)) (t (:background ,c256bg-0 :foreground ,c256fg-0))))
+   '(default ((t (:family "Courier New" :width normal :height 130 :weight normal :slant normal))))
+   `(default ((,default-class (:background ,bg-0 :foreground ,fg-0)) (t (:background ,bg256-0 :foreground ,fg256-0))))
 
    ;; Comments Face
-   `(font-lock-comment-face ((,default-class (:foreground ,cfg-orange))))
+   `(font-lock-comment-face ((,default-class (:foreground ,fg-orange))))
 
    ;; Ediff Fine Differences
-   `(ediff-even-diff-A ((,default-class (:background ,cbg-1))))
-   `(ediff-even-diff-B ((,default-class (:background ,cbg-1))))
-   `(ediff-even-diff-C ((,default-class (:background ,cbg-1))))
-   `(ediff-odd-diff-A ((,default-class (:background ,cbg-1))))
-   `(ediff-odd-diff-B ((,default-class (:background ,cbg-1))))
-   `(ediff-odd-diff-C ((,default-class (:background ,cbg-1))))))
+   `(ediff-even-diff-A ((,default-class (:background ,bg-1))))
+   `(ediff-even-diff-B ((,default-class (:background ,bg-1))))
+   `(ediff-even-diff-C ((,default-class (:background ,bg-1))))
+   `(ediff-odd-diff-A ((,default-class (:background ,bg-1))))
+   `(ediff-odd-diff-B ((,default-class (:background ,bg-1))))
+   `(ediff-odd-diff-C ((,default-class (:background ,bg-1))))
+
+   ;; Markdown
+   `(markdown-code-face ((,default-class (:background ,bg-1))))))
 
 (provide-theme 'mowl)
