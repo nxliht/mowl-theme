@@ -27,10 +27,12 @@
 (deftheme mowl
   "Nice dark theme for emacs.")
 
-(let ((bg-0 "#111b27")
+(let ((bg-0 "#15212d")
       (bg-1 "#2c434f")
-      (fg-0 "#e8f0ff")
-      (fg-orange "#fe9225")
+      (bg-3 "#424d67")
+      (fg-0 "#e0f9ff")
+      (fg-3 "#c1fcff")
+      (fg-orange "#ffa13d")
       (bg256-0 "#080808")
       (fg256-0 "#eeeeee")
       (fg256-orange "#ffaf00")
@@ -43,6 +45,9 @@
    `(default ((default (:family "Courier New" :width normal :height 130 :weight normal :slant normal ))
               (,default-class (:background ,bg-0 :foreground ,fg-0))
               (t (:background ,bg256-0 :foreground ,fg256-0))))
+
+   ;; Region
+   `(region ((,default-class (:background ,bg-3 :foreground ,fg-3))))
 
    ;; Comments Face
    `(font-lock-comment-face ((,default-class (:foreground ,fg-orange))
