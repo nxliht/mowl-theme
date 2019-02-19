@@ -43,7 +43,7 @@
    'mowl
 
    ;; Default
-   `(default ((default (:family "Courier New" :width normal :height 130 :weight normal :slant normal ))
+   `(default ((default (:family "Courier New" :width normal :height 130 :weight normal :slant normal))
               (,default-class (:background ,bg-0 :foreground ,fg-0))
               (,color-256 (:background ,bg256-0 :foreground ,fg256-0))))
 
