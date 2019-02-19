@@ -27,31 +27,36 @@
 (deftheme mowl
   "Nice dark theme for emacs.")
 
-(let ((bg-0 "#15212d")
-      (bg-1 "#2c434f")
-      (bg-3 "#424d67")
+(let ((bg-0 "#15212d")         ; default
       (fg-0 "#e0f9ff")
-      (fg-3 "#c1fcff")
-      (fg-orange "#ffa13d")
-      (bg256-0 "#080808")
+      (bg-1 "#2c434f")
+      (bg-3 "#426e8f")
+      (fg-3 "#ffffff")
+      (fg-orange "#db8d00")
+      (bg256-0 "#080808")      ; default
       (fg256-0 "#eeeeee")
       (fg256-orange "#ffaf00")
+      (color-256 '((class color) (min-colors 256)))
       (default-class '((class color) (min-colors 16777216))))
 
   (custom-theme-set-faces
    'mowl
 
-   ;; Default Face
+   ;; Default
    `(default ((default (:family "Courier New" :width normal :height 130 :weight normal :slant normal ))
               (,default-class (:background ,bg-0 :foreground ,fg-0))
-              (t (:background ,bg256-0 :foreground ,fg256-0))))
+              (,color-256 (:background ,bg256-0 :foreground ,fg256-0))))
+
+   ;; Fixed Pitch
+   `(fixed-pitch (t (:family "Courier New")))
+   `(fixed-pitch-serif (t (:family "Courier New")))
 
    ;; Region
    `(region ((,default-class (:background ,bg-3 :foreground ,fg-3))))
 
    ;; Comments Face
    `(font-lock-comment-face ((,default-class (:foreground ,fg-orange))
-                             (t (:foreground ,fg256-orange))))
+                             (,color-256 (:foreground ,fg256-orange))))
 
    ;; Ediff Fine Differences
    `(ediff-even-diff-A ((,default-class (:background ,bg-1))))
@@ -60,6 +65,12 @@
    `(ediff-odd-diff-A ((,default-class (:background ,bg-1))))
    `(ediff-odd-diff-B ((,default-class (:background ,bg-1))))
    `(ediff-odd-diff-C ((,default-class (:background ,bg-1))))
+
+   `(ediff-current-diff-C ((,default-class (:background "#fffae0" :foreground "#404040")))) ; Yellow
+
+   ;; Smerge
+   `(smerge-lower ((,default-class (:background "#008a00" :foreground "#ffffff")))) ; Green
+   `(smerge-upper ((,default-class (:background "#e01300" :foreground "#f0f0f0")))) ; Red
 
    ;; Markdown
    `(markdown-code-face ((,default-class (:background ,bg-1))))))
