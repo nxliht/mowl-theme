@@ -48,8 +48,8 @@
               (,color-256 (:background ,bg256-0 :foreground ,fg256-0))))
 
    ;; Fixed Pitch
-   `(fixed-pitch (t (:family "Courier New")))
-   `(fixed-pitch-serif (t (:family "Courier New")))
+   `(fixed-pitch ((t (:family "Courier New"))))
+   `(fixed-pitch-serif ((t (:family "Courier New"))))
 
    ;; Region
    `(region ((,default-class (:background ,bg-3 :foreground ,fg-3))))
